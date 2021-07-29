@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-image: linear-gradient(0deg, rgba(105, 103, 240, 0.3), rgba(7, 2, 41, 0.3)), url("assets/samantha-gades-BlIhVfXbi9s-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.header .card{
+    width: 60%;
+    height: 200px;
+    background-color: #5a5655;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header .card .divider{
+    background-color: #423F3E; 
+    width: 100%; 
+    height: 3px; 
+    margin: 15px 0; 
+    border-radius: 5px;
+}
+
+.header .card .aksi-btn{
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .card .aksi-btn .search-books{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0 0 0 6px;
+    border-radius: 3px;
+}  
+
+.header .card h3{
+    margin-bottom: 20px;
+    font-weight: normal;
+} 
+
+.header .card .aksi-btn .search-books input{
+   padding: 4px 10px;
+   border: none;
+   width: 120px;
+} 
+
+.header .card .aksi-btn .search-books input[type=submit]{
+    border: none;
+    width: 50px;
+    background-color: #0A1931;
+    color: white;
+ }
+
+.header .card .aksi-btn button{
+    padding: 5px;
+    width: 120px;
+    margin: 10px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: #0A1931;
+    color: white;
+}
+
+.header .card .aksi-btn button:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.main{
+    width: 100%;
+    height: 800px;
+    background-color: #E6DDC6;
+}
+
+.modal-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-bg .modal{
+    position: relative;
+    background-color: #5D534A;
+    color: white;
+    width: 30%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
+}
+
+.modal-bg .modal h2{
+    text-align: center;
+}
+
+.modal-bg .modal .input-area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 15px 10px;
+}
+
+.modal-bg .modal .input-area label{
+    margin-bottom: 5px;
+}
+
+.modal-bg .modal .input-area input{
+   padding: 8px;
+   border-radius: 2px;
+   border: none;
+}
+
+.modal-bg .modal .input-area select{
+    padding: 8px;
+    border-radius: 2px;
+    border: none;
+}
+
+.modal-bg .modal .btn-form{
+    padding: 8px;
+}
+
+.modal-bg .modal .btn-form input{
+    padding: 8px;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+    border: none;
+    background-color: #423F3E;
+    color: white;
+}
+
+.modal-bg .modal .btn-form input:hover{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main{
+    padding: 120px 100px;
+}
+
+.main .book-card{
+    border-radius: 5px;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 10px 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .book-card .belum-dibaca{
+    flex: 1;
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+.main .book-card .sudah-dibaca{
+    flex: 1;
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+.main .book-card div .books{
+    height: fit-content;
+    background-color: #C2B8A3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.edit-books{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0A1931;
+    color: white;
+}
+
+.edit-books div{
+    margin: 5px;
+}
+
+.edit-books div input{
+    padding: 6px;
+}
+
+.edit-books div input[type=submit], .edit-books div input[type=button]{
+    width: 60px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-books div input[type=submit]:hover, .edit-books div input[type=button]:hover{
+    background-color: #5a5655;
+    color: white;
+    font-weight: bold;
+}
+
+.edit-books div select{
+    padding: 6px;
+}
+
+.main .book-card div .books p{
+    flex: 1;
+    font-weight: bold;
+}
+
+.main .book-card div .books .btn-books{
+    margin: 5px 2px;
+    padding: 5px;
+    width: 30px;
+    border: none;
+}
+
+.main .book-card div .books .btn-books:hover{
+    background-color: #423F3E;
+    color: white;
+    cursor: pointer;
+}
+
+.main .book-card div .books p:first-child{
+    font-size: 32px;
+}
+
+.main .book-card div .books:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .header .card{  
+        width: 90%;  
+        height: fit-content;
+        align-items: center;
+    }
+    .modal-bg .modal{
+        width: 90%;
+    }
+
+    .main{
+        padding: 160px 20px;
+    }
+
+    .main .book-card{
+       flex-direction: column;
+       padding: 0;
+       width: 100%;
+    }
+
+    .main .book-card div .books{
+       flex-direction: column;
+       height: fit-content;
+    }
+
+    .header .card .aksi-btn{
+       flex-direction: column;
+    }
+}

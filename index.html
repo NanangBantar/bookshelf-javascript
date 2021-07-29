@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="card">
+            <div class="title">
+                <h1><i class="fa fa-book" aria-hidden="true"></i>&nbsp; BOOKSHELF</h1>
+            </div>
+            <div class="divider"></div>
+            <div class="aksi-btn">
+                <button id="show-modal1"><i class="fa fa-plus" aria-hidden="true"></i> Tambahkan</button>
+                <div class="search-books">
+                    <form id="form-searchbook">
+                        <input name="judulbuku" type="text" placeholder="Cari judul buku">
+                        <input type="submit" value="Cari">
+                    </form>
+                </div>
+            </div>
+            <h3>Masukan kata kunci kosong untuk reset pencarian</h3>
+            <div class="contact">
+                &copy; Designed By Bantar Trisna Ardhi&nbsp; <i class="fa fa-envelope"></i> bantartrisna@gmail.com
+            </div>
+        </div>
+    </section>
+
+    <section id="load-books" class="main">
+        <div class="book-card">
+            <div class="belum-dibaca">
+                <h1 style="text-align: center; margin: 10px 0;">BELUM DI BACA</h1>
+
+            </div>
+            <div class="sudah-dibaca">
+                <h1 style="text-align: center; margin: 10px 0;">SUDAH DI BACA</h1>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-bg">
+        <div class="modal">
+            <form id="form1">
+                <h2 id="judul-aksi">Tambahkan Buku Anda</h2>
+                <div class="input-area">
+                    <label>Judul Buku</label>
+                    <input name="title" type="text" placeholder="Masukan judul buku anda" required>
+                </div>
+                <div class="input-area">
+                    <label>Penulis Buku</label>
+                    <input name="author" type="text" placeholder="Penulis Buku" required>
+                </div>
+                <div class="input-area">
+                    <label>Tahun Penerbitan Buku</label>
+                    <input name="year" type="month" placeholder="Tahun Penerbitan" required>
+                </div>
+                <div class="input-area">
+                    <label>Status Membaca</label>
+                    <select required name="isComplete">
+                        <option value="1">Belum di baca</option>
+                        <option value="0">Sudah di baca</option>
+                    </select>
+                </div>
+
+                <div class="btn-form">
+                    <input type="submit" value="Submit">
+                </div>
+
+                <span class="modal-close">X</span>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="myscript.js"></script>
+    <script src="localstorage.js"></script>
+
+</body>
+
+</html>
